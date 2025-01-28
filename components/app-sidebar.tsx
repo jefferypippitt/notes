@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { GalleryVerticalEnd} from "lucide-react"
+import * as React from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { NotebookTabs } from 'lucide-react'
 
 import {
   Sidebar,
@@ -14,15 +14,15 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
-  SidebarMenuButton,
-} from "@/components/ui/sidebar"
-import { ModeToggle } from "./theme-toggle"
+  SidebarMenuButton
+} from '@/components/ui/sidebar'
+import { ModeToggle } from './theme-toggle'
 
 const navItems = [
-  { title: "Introduction", url: "/" },
-  { title: "Getting Started", url: "/getting-started" },
-  { title: "Components", url: "/components" },
-  { title: "Prettier", url: "/prettier" },
+  { title: 'Introduction', url: '/' },
+  { title: 'Getting Started', url: '/getting-started' },
+  { title: 'Components', url: '/components' },
+  { title: 'Prettier', url: '/prettier' }
 ]
 
 export function AppSidebar() {
@@ -33,27 +33,26 @@ export function AppSidebar() {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <Link href="/">
-                <div className="bg-primary text-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <GalleryVerticalEnd className="size-4" />
+            <SidebarMenuButton size='lg' asChild>
+              <Link href='/'>
+                <div className='flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground'>
+                  <NotebookTabs className='size-4' />
                 </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">Next.js Notes</span>
-                  <span className="">v1.0.0</span>
+                <div className='flex flex-col gap-0.5 leading-none'>
+                  <span className='font-semibold'>Next.js Notes</span>
+                  <span className=''>v1.0.0</span>
                 </div>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
-        
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map((item) => (
+              {navItems.map(item => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild isActive={pathname === item.url}>
                     <Link href={item.url}>{item.title}</Link>
@@ -67,7 +66,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Change Theme</SidebarGroupLabel>
           <SidebarGroupContent>
-            <div className="px-2">
+            <div className='px-2'>
               <ModeToggle />
             </div>
           </SidebarGroupContent>
@@ -76,4 +75,3 @@ export function AppSidebar() {
     </Sidebar>
   )
 }
-

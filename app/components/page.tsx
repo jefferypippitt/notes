@@ -114,13 +114,13 @@ export default function ComponentsPage() {
   return (
     <main className="max-w-3xl mx-auto">
       <section>
-        <h1 className="text-3xl font-bold mb-6">Components with Dark Mode</h1>
+        <h1 className="text-2xl font-bold mb-6">Components with Dark Mode</h1>
         <p className="mb-4">Run the following command in your terminal:</p>
         <PnpmCommand command="pnpm dlx shadcn-ui@latest add button" />
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Theme Provider Setup</h2>
+        <h2 className="text-xl font-semibold mb-4">Theme Provider Setup</h2>
         <p className="mb-4">First, install the themes package:</p>
         <PnpmCommand command="pnpm add next-themes" />
 
@@ -133,13 +133,13 @@ export default function ComponentsPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">App Layout</h2>
+        <h2 className="text-xl font-semibold mb-4">App Layout</h2>
         <p className="mb-4">Add this snippet into the main layout.tsx file</p>
         <PnpmCommand command={appLayoutCode} />
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Theme Toggle</h2>
+        <h2 className="text-xl font-semibold mb-4">Theme Toggle</h2>
         <p className="mb-4">
           Create a new file called{" "}
           <span className="text-green-500">theme-toggle.tsx</span>
@@ -152,7 +152,7 @@ export default function ComponentsPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Header</h2>
+        <h2 className="text-xl font-semibold mb-4">Header</h2>
         <p className="mb-4">
           Create a new file called{" "}
           <span className="text-green-500">header.tsx</span>
